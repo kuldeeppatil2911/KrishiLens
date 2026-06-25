@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: krishilens-backend
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        value: mongodb+srv://kp494563:Kp%2329112004@cluster0.cglyv.mongodb.net/krishilens?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET
+        value: krishilens_jwt_secret_key_2024
+      - key: FASTAPI_URL
+        value: https://plant-ai-api-1.onrender.com
